@@ -9,6 +9,10 @@
 
 # Resourses:
 
+### Books:
+
+- https://drive.google.com/drive/folders/1oZeJRh55cW0VYZ-IfoDWYqBhxKbqE1Tg?usp=sharing
+
 ### Data Structure & Algorithms Visualizations:
 
 - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
