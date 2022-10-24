@@ -9,5 +9,10 @@
 
 # Resourses:
 
-- Data Structure & Algorithms Visualizations:
-  https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+### Data Structure & Algorithms Visualizations:
+
+- https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
+### Algorithms - Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh V. Vazirani.pdf :
+
+- https://github.com/eherbold/berkeleytextbooks/blob/master/Algorithms%20-%20Sanjoy%20Dasgupta%2C%20Christos%20H.%20Papadimitriou%2C%20and%20Umesh%20V.%20Vazirani.pdf
