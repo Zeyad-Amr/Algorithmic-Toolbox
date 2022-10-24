@@ -1,3 +1,0 @@
-C:/Users/Zeyad-Amr/Documents/GitHub/Algorithmic-Toolbox/Week 2/Febonacci Numbers/cmake-build-debug/CMakeFiles/practice.dir
-C:/Users/Zeyad-Amr/Documents/GitHub/Algorithmic-Toolbox/Week 2/Febonacci Numbers/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Zeyad-Amr/Documents/GitHub/Algorithmic-Toolbox/Week 2/Febonacci Numbers/cmake-build-debug/CMakeFiles/rebuild_cache.dir

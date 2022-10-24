@@ -3,7 +3,8 @@
 using namespace std;
 using namespace std::chrono;
 
-int main() {
+int main()
+{
 
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -15,8 +16,9 @@ int main() {
     auto start = high_resolution_clock::now();
 
     // Function to be executed
-    for (int i = 0; i < 1000; ++i) {
-        cout<<i+1<<endl;
+    for (int i = 0; i < 1000; ++i)
+    {
+        cout << i + 1 << endl;
     }
 
     // After function call
@@ -31,10 +33,9 @@ int main() {
 
     // To get the value of duration use the count()
     // member function on the duration object
-    cout <<"Execution Time: "<< duration.count() <<" microseconds"<< endl;
-    cout <<"Execution Time: "<< duration.count()/1000 <<" milliseconds"<< endl;
-    cout <<"Execution Time: "<< duration.count()/1000000 <<" seconds"<< endl;
-
+    cout << "Execution Time: " << duration.count() << " microseconds" << endl;
+    cout << "Execution Time: " << duration.count() / 1000 << " milliseconds" << endl;
+    cout << "Execution Time: " << duration.count() / 1000000 << " seconds" << endl;
 
     return 0;
 }
