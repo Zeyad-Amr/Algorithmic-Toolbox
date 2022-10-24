@@ -56,6 +56,10 @@ long long FibNum(int n)
         return n3;
     }
 }
+
+/// ** NOTE **
+/// Fiboacci List is very Faster then Fibonacci Recrsive
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -87,7 +91,7 @@ int main()
             result = FibList(n);
         }
 
-        cout << "Result= " << FibRecursive(n) << endl;
+        cout << "Result= " << result << endl;
 
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop - start);
@@ -96,7 +100,6 @@ int main()
              << "\n--------------------------------------------------\n";
 
         // choose the algorithm
-        t;
         cout << "Choose the algorithm to get Fibonacci Number:" << endl;
         cout << "1. Fibonacci Recursive\n2. Fibonacci List" << endl;
         cin >> t;
