@@ -28,6 +28,7 @@ int FibList(int n){
     }
 }
 // Another Algorithm for Fibonacci without recursion
+// and without list
 int FibNum(int n){
     if(n<=1){
         return n;
@@ -47,18 +48,37 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    int n;
-    cout<<"Enter Fibonacci length"<<endl;
-    cin>>n;
+    // choose the algorithm
+    int t;
+    cout<<"Choose the algorithm to get Fibonacci Number:"<<endl;
+    cout<<"1. Fibonacci Recursive\n2. Fibonacci List\nEnter any key to end"<<endl;
+    cin>>t;
 
-    auto start = high_resolution_clock::now();
+    while(t==1||t==2){
 
-    cout<<FibRecursive(n)<<" - "<<FibList(n)<<" - "<<FibNum(n)<<endl;
+        // input n-th Fibonacci number
+        int n;
+        cout<<"Enter n-th Fibonacci number"<<endl;
+        cin>>n;
 
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-    cout <<"Execution Time: "<< duration.count()<<" microseconds"<< endl;
-    cout <<"Execution Time: "<< duration.count()/1000 <<" milliseconds"<< endl;
+        auto start = high_resolution_clock::now();
+        if(t==1){
+            cout<<"Result= "<<FibRecursive(n)<<endl;
+        }else if(t==2){
+            cout<<"Result= "<<FibList(n)<<endl;
+        }
+
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        cout <<"Execution Time: "<< duration.count()<<" microseconds"<< endl;
+        cout <<"Execution Time: "<< duration.count()/1000 <<" milliseconds"<< "\n---------------------------------------------------------------------------------------------------\n";
+
+        // choose the algorithm
+        t;
+        cout<<"Choose the algorithm to get Fibonacci Number:"<<endl;
+        cout<<"1. Fibonacci Recursive\n2. Fibonacci List"<<endl;
+        cin>>t;
+    }
 
     return 0;
 }
