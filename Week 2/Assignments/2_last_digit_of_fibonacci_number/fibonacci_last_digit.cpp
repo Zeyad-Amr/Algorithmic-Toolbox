@@ -12,14 +12,14 @@ long long LastDigitOfFibNum(int n)
     }
     else
     {
-        int n1 = 0, n2 = 1, n3;
+        vector<int> fibList = {0, 1};
+
         for (int i = 2; i <= n; ++i)
         {
-            n3 = (n1 + n2) % 10;
-            n1 = n2;
-            n2 = n3;
+            fibList.push_back((fibList.at(i - 1) + fibList.at(i - 2)) % 10);
         }
-        return n3;
+
+        return fibList.back();
     }
 }
 

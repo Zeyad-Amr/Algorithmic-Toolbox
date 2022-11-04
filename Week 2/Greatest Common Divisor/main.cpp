@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
-#include <chrono>
 using namespace std;
-using namespace std::chrono;
 
 long long NaiveGCD(int a, int b)
 {
     long long gcd = 0;
-    for (size_t i = 1; i <= min(a, b); i++)
+    int min_number = min(a, b);
+    for (size_t i = 1; i <= min_number; i++)
     {
-        if (i / a || i / b)
+        if ((a % i == 0) && (b % i == 0))
         {
             gcd = i;
         }
@@ -29,6 +28,10 @@ long long EuclidGCD(int a, int b)
     }
 }
 
+test_function(a, b)
+{
+    cout << (EuclidGCD(a, b) == NaiveGCD(a, b)) << endl;
+}
 /// ** NOTE **
 /// Euclidean GCD is very Faster then Naive GCD
 
@@ -39,45 +42,14 @@ int main()
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    // choose the algorithm
-    int t;
-    cout << "Choose the algorithm to get GCD:" << endl;
-    cout << "1. Naive\n2. Euclidean\nEnter any key to end" << endl;
-    cin >> t;
+    // input the two number
+    long long a, b;
 
-    while (t == 1 || t == 2)
-    {
+    cin >> a >> b;
 
-        // input the two number
-        long long a, b;
-        cout << "Enter the two numbers" << endl;
-        cin >> a >> b;
+    long long result = EuclidGCD(a, b);
 
-        auto start = high_resolution_clock::now();
-        long long result = 0;
-        if (t == 1)
-        {
-            result = NaiveGCD(a, b);
-        }
-        else if (t == 2)
-        {
-            result = EuclidGCD(a, b);
-        }
-
-        cout << "Result= " << result << endl;
-
-        auto stop = high_resolution_clock::now();
-        auto duration = duration_cast<microseconds>(stop - start);
-        cout << "Execution Time: " << duration.count() << " microseconds" << endl;
-        cout << "Execution Time: " << duration.count() / 1000 << " milliseconds"
-             << "\n--------------------------------------------------\n";
-
-        // choose the algorithm
-
-        cout << "Choose the algorithm to get GCD:" << endl;
-        cout << "1. Naive\n2. Euclidean\nEnter any key to end" << endl;
-        cin >> t;
-    }
+    cout << result << endl;
 
     return 0;
 }

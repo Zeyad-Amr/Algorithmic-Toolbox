@@ -60,50 +60,24 @@ long long FibNum(int n)
 /// ** NOTE **
 /// Fiboacci List is very Faster then Fibonacci Recrsive
 
+test_function(int n)
+{
+    cout << (FibList(n) == FibRecursive(n)) << endl;
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    // choose the algorithm
-    int t;
-    cout << "Choose the algorithm to get Fibonacci Number:" << endl;
-    cout << "1. Fibonacci Recursive\n2. Fibonacci List\nEnter any key to end" << endl;
-    cin >> t;
+    // input n-th Fibonacci number
+    int n;
+    cin >> n;
 
-    while (t == 1 || t == 2)
-    {
+    int result = FibList(n);
 
-        // input n-th Fibonacci number
-        int n;
-        cout << "Enter n-th Fibonacci number" << endl;
-        cin >> n;
-
-        auto start = high_resolution_clock::now();
-        long long result = 0;
-        if (t == 1)
-        {
-            result = FibRecursive(n);
-        }
-        else if (t == 2)
-        {
-            result = FibList(n);
-        }
-
-        cout << "Result= " << result << endl;
-
-        auto stop = high_resolution_clock::now();
-        auto duration = duration_cast<microseconds>(stop - start);
-        cout << "Execution Time: " << duration.count() << " microseconds" << endl;
-        cout << "Execution Time: " << duration.count() / 1000 << " milliseconds"
-             << "\n--------------------------------------------------\n";
-
-        // choose the algorithm
-        cout << "Choose the algorithm to get Fibonacci Number:" << endl;
-        cout << "1. Fibonacci Recursive\n2. Fibonacci List" << endl;
-        cin >> t;
-    }
+    cout << result << endl;
 
     return 0;
 }

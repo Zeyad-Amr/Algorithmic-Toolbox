@@ -1,7 +1,7 @@
 #include <iostream>
 
 //  calc Pisano period length
-long pisanoPeriodLength(long m)
+long pisano_period_length(long m)
 {
     long previous = 0;
     long current = 1;
@@ -25,7 +25,7 @@ long long get_fibonacci_huge(long long n, long long m)
     // Firsy calc pisano period length
     // for the mod to simplify the mod value
 
-    n = n % pisanoPeriodLength(m);
+    n = n % pisano_period_length(m);
     if (n <= 1)
         return n;
 
