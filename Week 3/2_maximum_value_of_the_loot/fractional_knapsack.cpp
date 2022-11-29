@@ -74,10 +74,10 @@ double get_optimal_value_iter(int capacity, vector<int> weights, vector<int> cos
 }
 
 /// @brief stress testing function
-void test_function(int n, int lenght)
+void test_function(int n, int length)
 {
   int i = 0;
-  while (i < lenght)
+  while (i < length)
   {
     int capactiy = rand() % 100 + 10;
     cout << n << " " << capactiy << endl;
