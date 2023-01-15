@@ -57,7 +57,7 @@ long long FibNum(int n)
     }
 }
 
-/// ** NOTE **
+// ** NOTE **
 /// Fiboacci List is very Faster then Fibonacci Recrsive
 
 test_function(int n)

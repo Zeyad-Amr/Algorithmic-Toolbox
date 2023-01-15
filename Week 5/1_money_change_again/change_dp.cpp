@@ -13,7 +13,6 @@ int DpChange(int m, vector<int> coins)
     minNumCoins[i] = INT_MAX;
     for (int j = 0; j < coins.size(); j++)
     {
-
       if (i >= coins[j])
       {
         int numCoins = minNumCoins[i - coins[j]] + 1;
